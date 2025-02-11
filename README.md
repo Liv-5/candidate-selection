@@ -1,33 +1,51 @@
-# React + TypeScript + Vite
+# Candidate Selection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Currently, two official plugins are available:
+## Description
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [GitHub Repository](#github-repository)
+- [Preview](#preview)
+- [Credits](#credits)
+- [License](#license)
+- [How to Contribute](#how-to-contribute)
+- [Questions](#questions)
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Github Repository
 
-* Configure the top-level `parserOptions` property as follows:
+[GitHub Repository](https://github.com/Liv-5/candidate-selection)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Preview
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+<!-- ![portfolio about page](src/assets/portfolioaboutss.png)
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+![portfolio contact page](src/assets/portfoliocontactss.png)
+
+![portfolio page](src/assets/portfolioportss.png)
+
+![portfolio resume page](src\assets\portfolioresumess.PNG) -->
+
+<img src="./src/assets/portfolioaboutss.PNG" alt="portfolio about page">
+<img src="./src/assets/portfoliocontactss.PNG" alt="portfolio contact page">
+<img src="./src/assets/portfolioportss.PNG" alt="portfolio page">
+<img src="./src/assets/portfolioresumess.PNG" alt="portfolio resume page">
+
+## Deployed Webpage
+
+[Deployed Portfolio](https://livs-portfolio-page.netlify.app/)
+
+## Credits
+
+## License
+
+This project is licensed under [MIT](https://opensource.org/licenses/MIT)
+
+## How to Contribute
+
+You can contact me if you would like to contribute
+
+## Questions
+
+If you have any questions regarding this project you can email me at, [ osmith5@kent.edu](mailto:osmith5@kent.edu) or go to my [Github](https://github.com/Liv-5)
