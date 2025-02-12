@@ -17,7 +17,7 @@ const CandidateSearch = () => {
 
       fetchUser(data);
     });
-  }, []);
+  }, [currentIndex]);
 
   const fetchUser = async (data: [{ login: string }]) => {
     try {
@@ -73,7 +73,7 @@ const CandidateSearch = () => {
           <li>Company: {candidate?.company}</li>
         </ul>
         <button onClick={nextCandidate}> - </button>
-        <button onClick={SavedCandidates}> + </button>
+        <button onClick={saveCandidate}> + </button>
       </div>
     </div>
   );
