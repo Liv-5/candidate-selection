@@ -2,24 +2,22 @@ const Nav = () => {
   // TODO: Add necessary code to display the navigation bar and link between the pages
   const navLinks = [
     {
-      name: "Candidate Search",
+      name: "Home",
       link: "/",
     },
     {
       name: "Saved Candidates",
-      link: "/Saved",
+      link: "/SavedCandidates",
     },
   ];
 
   return (
-    <nav>
-      <section>
-        {navLinks.map((l) => (
-          <div>
-            <a href={l.link}>{l.name}</a>
-          </div>
-        ))}
-      </section>
+    <nav className="nav">
+      {navLinks.map((l) => (
+        <a className="nav-item nav-link" href={l.link}>
+          {l.name}
+        </a>
+      ))}
     </nav>
   );
 };

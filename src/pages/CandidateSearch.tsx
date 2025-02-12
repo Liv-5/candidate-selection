@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { searchGithub, searchGithubUser } from "../api/API";
 import Candidate from "../interfaces/Candidate.interface";
+import SavedCandidates from "./SavedCandidates";
 
 const CandidateSearch = () => {
   const [users, setUsers] = useState<[{ login: string }]>([]);
@@ -34,47 +35,29 @@ const CandidateSearch = () => {
       return;
     }
 
-    const savedCandidates = 
-      const storedData = localStorage.getItem("savedCandidates");
-      const savedCandidates: Array<Candidate> = storedData
-        ? (JSON.parse(storedData) as Candidate[])
-        : [];
+    const storedData = localStorage.getItem("savedCandidates");
+    const savedCandidates: Candidate[] = storedData
+      ? (JSON.parse(storedData) as Candidate[])
+      : [];
 
-      savedCandidates.push(users[currentIndex]); // Save current candidate
-      localStorage.setItem("savedCandidates", JSON.stringify(savedCandidates));
-     
-      nextCandidate(); // Move to next candidate
-    
+    savedCandidates.push(users[currentIndex]); // Save current candidate
+    localStorage.setItem("savedCandidates", JSON.stringify(savedCandidates));
+
+    nextCandidate(); // Move to next candidate
   };
   const nextCandidate = () => {
     setIndex(currentIndex + 1);
     fetchUser(users);
   };
 
-  // const nextCandidate = () => {
-  //   setIndex(currentIndex + 1);
-
-  //   fetchUser(users);
-  // };
-
-  //   useEffect(() => {
-  //     if (users.length > 0) {
-  //       searchGithubUser(users[0].username).then((data) => {
-  //         setCandidate(data);
-  //         console.log("Fetched Candidate:", data);
-  //       });
-
-  //     //  localStorage.setItem("savedUsers", users );
-  //     });
-
-  //     }
-  //  [users];
+  // console.log(saveCandidate);
 
   return (
     <div>
       <h1>Candidates </h1>
       <div>
         <img
+          className="avatar"
           src={
             candidate?.avatar_url ||
             "https://info.orcid.org/wp-content/uploads/2019/11/github-logo.jpg"
@@ -90,7 +73,7 @@ const CandidateSearch = () => {
           <li>Company: {candidate?.company}</li>
         </ul>
         <button onClick={nextCandidate}> - </button>
-        <button onClick={nextCandidate}> + </button>
+        <button onClick={SavedCandidates}> + </button>
       </div>
     </div>
   );
