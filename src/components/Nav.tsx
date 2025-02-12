@@ -13,8 +13,8 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      {navLinks.map((l) => (
-        <a className="nav-item nav-link" href={l.link}>
+      {navLinks.map((l, i) => (
+        <a key={i} className="nav-item nav-link" href={l.link}>
           {l.name}
         </a>
       ))}
