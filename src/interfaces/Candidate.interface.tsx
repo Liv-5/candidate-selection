@@ -2,7 +2,7 @@
 interface Candidate {
   name?: string;
 
-  login?: string;
+  login: string;
 
   location?: string;
 

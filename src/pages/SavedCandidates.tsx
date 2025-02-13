@@ -20,7 +20,17 @@ const SavedCandidates = () => {
     getSavedCandidates();
   }, []);
 
-  // const handleDelete = (candidate.login) => {
+  const handleDelete = (login: string) => {
+    const storedData = localStorage.getItem("savedCandidates");
+    const savedCandidates: Candidate[] = storedData
+      ? (JSON.parse(storedData) as Candidate[])
+      : [];
+    const newSavedCan = savedCandidates.filter(
+      (candidate) => login !== candidate.login
+    );
+    setCandidates(newSavedCan);
+    localStorage.setItem("savedCandidates", JSON.stringify(newSavedCan));
+  };
 
   return (
     <>
@@ -72,8 +82,7 @@ const SavedCandidates = () => {
               </td>
               <td key={candidate.company}>{candidate.company}</td>
               <td>
-                <button>
-                  {/* onClick={() => handleDelete(candidate.login)} */}
+                <button onClick={() => handleDelete(candidate.login)}>
                   Delete
                 </button>
               </td>
