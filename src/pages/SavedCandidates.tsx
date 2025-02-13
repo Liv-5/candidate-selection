@@ -69,7 +69,8 @@ const SavedCandidates = () => {
               </td>
               <td key={candidate.company}>{candidate.company}</td>
               <td key={i}>
-                <button onClick={() => handleDelete(candidate.login)}>
+                <button>
+                  {/* onClick={() => handleDelete(candidate.login)} */}
                   Delete
                 </button>
               </td>
