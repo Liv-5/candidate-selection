@@ -1,17 +1,17 @@
 // TODO: Create an interface for the Candidate objects returned by the API
 interface Candidate {
-  name?: string | null;
+  name?: string;
 
-  login?: string | null;
+  login?: string;
 
-  location?: string | null;
+  location?: string;
 
-  avatar_url?: string | null;
+  avatar_url?: string;
 
-  email?: string | null;
+  email?: string;
 
-  html_url?: string | null;
+  html_url?: string;
 
-  company?: string | null;
+  company?: string;
 }
 export default Candidate;
