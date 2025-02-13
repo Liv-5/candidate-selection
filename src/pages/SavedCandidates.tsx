@@ -23,36 +23,49 @@ const SavedCandidates = () => {
       <table>
         <thead>
           <tr>
+            <th>Avatar url</th>
             <th>Login</th>
             <th>Name</th>
-            <th>Avatar url</th>
             <th>Location</th>
             <th>Email</th>
-            <th>HTML url</th> <th>Company</th>
+            <th>HTML url</th>
+            <th>Company</th>
           </tr>
         </thead>
         <tbody>
           {candidates.current.map((candidate: Candidate, i) => (
             <tr>
-              <td key={i}>{candidate.login}</td>
-              <td key={i}>{candidate.name}</td>
               <td key={i}>
                 <img
-                  className="avatar"
                   src={
                     candidate?.avatar_url ||
                     "https://info.orcid.org/wp-content/uploads/2019/11/github-logo.jpg"
                   }
                   alt="profile image of GitHub user"
-                  width="20"
-                  height="20"
-                  style={{ borderRadius: "50%" }}
+                  // width="20px"
+                  // height="20px"
+                  style={{
+                    borderRadius: "25%",
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                  }}
                 />
               </td>
-              <td key={i}>{candidate.location}</td>
-              <td key={i}>{candidate.email}</td>
-              <td key={i}>{candidate.html_url}</td>
-              <td key={i}>{candidate.company}</td>
+              <td key={candidate.login || i}>{candidate.login}</td>
+              <td key={candidate.name}>{candidate.name}</td>
+
+              <td>{candidate.location}</td>
+              <td>{candidate.email}</td>
+              <td>
+                <a
+                  href="{candidate.html_url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {candidate.html_url}
+                </a>
+              </td>
+              <td key={candidate.company}>{candidate.company}</td>
               <td key={i}>
                 <button>Delete</button>
               </td>
