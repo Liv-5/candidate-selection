@@ -4,6 +4,8 @@
 
 ## Description
 
+A site for someone looking to hire people, they can sift through github user profiles and save them to a table to look through and narrow the table down with a delete button on each candidate.
+
 ## Table of Contents
 
 - [GitHub Repository](#github-repository)
@@ -19,24 +21,22 @@
 
 ## Preview
 
-<!-- ![portfolio about page](src/assets/portfolioaboutss.png)
+![portfolio contact page](src/assets/cand-selectss.PNG)
 
-![portfolio contact page](src/assets/portfoliocontactss.png)
+![portfolio about page](src\assets\pot-candss.PNG)
 
-![portfolio page](src/assets/portfolioportss.png)
-
-![portfolio resume page](src\assets\portfolioresumess.PNG) -->
-
-<img src="./src/assets/portfolioaboutss.PNG" alt="portfolio about page">
+<!-- <img src="./src/assets/portfolioaboutss.PNG" alt="portfolio about page">
 <img src="./src/assets/portfoliocontactss.PNG" alt="portfolio contact page">
 <img src="./src/assets/portfolioportss.PNG" alt="portfolio page">
-<img src="./src/assets/portfolioresumess.PNG" alt="portfolio resume page">
+<img src="./src/assets/portfolioresumess.PNG" alt="portfolio resume page"> -->
 
 ## Deployed Webpage
 
-[Deployed Portfolio](https://livs-portfolio-page.netlify.app/)
+[Deployed Portfolio](https://candidate-selection.onrender.com)
 
 ## Credits
+
+Many thanks to my Instructors and TAs, and the many tutoring sessions.
 
 ## License
 
