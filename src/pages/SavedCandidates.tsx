@@ -17,6 +17,8 @@ const SavedCandidates = () => {
     getSavedCandidates();
   }, []);
 
+  // const handleDelete = (candidate.login) => {
+
   return (
     <>
       <h1>Potential Candidates</h1>
@@ -67,7 +69,9 @@ const SavedCandidates = () => {
               </td>
               <td key={candidate.company}>{candidate.company}</td>
               <td key={i}>
-                <button>Delete</button>
+                <button onClick={() => handleDelete(candidate.login)}>
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
