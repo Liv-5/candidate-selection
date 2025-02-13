@@ -21,9 +21,9 @@ A site for someone looking to hire people, they can sift through github user pro
 
 ## Preview
 
-![portfolio contact page](src/assets/cand-selectss.PNG)
+![screenshot of candidate selection page](src/assets/cand-selectss.PNG)
 
-![portfolio about page](src\assets\pot-candss.PNG)
+![screeshot of saved candidates page](src\assets\pot-candss.PNG)
 
 <!-- <img src="./src/assets/portfolioaboutss.PNG" alt="portfolio about page">
 <img src="./src/assets/portfoliocontactss.PNG" alt="portfolio contact page">
