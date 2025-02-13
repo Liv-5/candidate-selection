@@ -1,17 +1,20 @@
-import { useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Candidate from "../interfaces/Candidate.interface";
 
 const SavedCandidates = () => {
-  const candidates = useRef<Candidate[]>([]);
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+
   useEffect(() => {
     const getSavedCandidates = () => {
       const storedData = localStorage.getItem("savedCandidates");
       const savedCandidates: Candidate[] = storedData
         ? (JSON.parse(storedData) as Candidate[])
         : [];
-      savedCandidates.map((candidate: Candidate) => {
-        candidates.current.push(candidate);
-      });
+      // savedCandidates.map((candidate: Candidate) => {
+      //   candidates.push(candidate);
+      // });
+      setCandidates(savedCandidates);
+
       console.log(candidates);
     };
     getSavedCandidates();
@@ -35,9 +38,9 @@ const SavedCandidates = () => {
           </tr>
         </thead>
         <tbody>
-          {candidates.current.map((candidate: Candidate, i) => (
-            <tr>
-              <td key={i}>
+          {candidates.map((candidate) => (
+            <tr key={candidate.node_id}>
+              <td>
                 <img
                   src={
                     candidate?.avatar_url ||
@@ -53,7 +56,7 @@ const SavedCandidates = () => {
                   }}
                 />
               </td>
-              <td key={candidate.login || i}>{candidate.login}</td>
+              <td key={candidate.login}>{candidate.login}</td>
               <td key={candidate.name}>{candidate.name}</td>
 
               <td>{candidate.location}</td>
@@ -68,7 +71,7 @@ const SavedCandidates = () => {
                 </a>
               </td>
               <td key={candidate.company}>{candidate.company}</td>
-              <td key={i}>
+              <td>
                 <button>
                   {/* onClick={() => handleDelete(candidate.login)} */}
                   Delete
