@@ -4,7 +4,7 @@ import Candidate from "../interfaces/Candidate.interface";
 // import SavedCandidates from "./SavedCandidates";
 
 const CandidateSearch = () => {
-  const [users, setUsers] = useState<[{ login: string }]>([]);
+  const [users, setUsers] = useState<Candidate[]>([]);
   const [candidate, setCandidate] = useState<Candidate>();
   const [currentIndex, setIndex] = useState(0);
 
@@ -19,11 +19,16 @@ const CandidateSearch = () => {
     });
   }, [currentIndex]);
 
-  const fetchUser = async (data: [{ login: string }]) => {
+  const fetchUser = async (data: Candidate[]) => {
     try {
-      const userData = await searchGithubUser(data[currentIndex].login);
-      console.log(userData);
-      setCandidate(userData);
+      if (data && data.length > 0) {
+        const login = data[currentIndex]?.login;
+        if (login) {
+          const userData = await searchGithubUser(login);
+          console.log(userData);
+          setCandidate(userData);
+        }
+      }
     } catch (error) {
       console.log(error);
     }

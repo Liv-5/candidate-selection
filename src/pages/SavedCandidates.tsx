@@ -39,7 +39,7 @@ const SavedCandidates = () => {
         </thead>
         <tbody>
           {candidates.map((candidate) => (
-            <tr key={candidate.node_id}>
+            <tr key={candidate.login}>
               <td>
                 <img
                   src={
